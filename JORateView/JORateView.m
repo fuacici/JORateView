@@ -72,7 +72,8 @@
         CGContextClipToRect(ctx,CGRectMake(starRct.origin.x, 0, _starSize.width*deltf, _starSize.height));
         CGContextDrawLayerInRect(ctx, starRct, fullStarLayer);
     }
-    
+    CFRelease(fullStarLayer);
+    CFRelease(emptyStarLayer);
 }
 - (void)setRating:(float)rating
 {
